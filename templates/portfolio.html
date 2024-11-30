@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{name}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/portfoliostyles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/mediaqueries.css')}}">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">{{name}}</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hamburger-menu -->
+    <nav id="hamburger-nav">
+        <div class="logo">{{name}}</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <!-- profile view of user{{name}} -->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="{{image}}" alt="{{name}} profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">{{name}}</h1>
+            <p class="section__text__p2">{{role}}</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./static/uploads/{{cv}}')")>Show Cv</button>
+                <button class="btn btn-color-1">Contact</button>
+            </div>
+            <div id="socials-container">
+                 <img src="{{url_for('static',filename='images/linkedin.png')}}" alt="My LinkedIn profile" class="icon" onclick="window.location.href='{{linkedin}}'" />
+                 <img src="{{url_for('static',filename='images/github.png')}}" alt="My Github profile" class="icon" onclick="window.location.href='{{github}}'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-container">
+            
+        </div>
+    </section>
+    <a href="/logout">Clear All</a>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>

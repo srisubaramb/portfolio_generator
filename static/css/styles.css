@@ -1,0 +1,111 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: rgb(85, 85, 85);
+}
+
+input[type="text"],
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 300ms ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#basic,
+#handles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* File Input Styles */
+input[type="file"] {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Section Titles */
+.title {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+/* Icon Styles */
+.icon {
+    cursor: pointer;
+    height: 2rem;
+    transition: transform 300ms ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}

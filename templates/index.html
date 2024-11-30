@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Generator</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}"/>
+</head>
+<body>
+    <h1>Enter your portfolio details</h1>
+    <!-- Form elements for accepting the user input -->
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div id="basic">
+            <label for="name">Name</label>
+            <input name="user-name" type="text" id="name" required/>
+            <label for="role">Want to be</label>
+            <input name="user-role" type="text" id="role" required/>
+            <label for="image">Profile image</label>
+            <input type="file" name="user-image" id="image" accept="image/*"/>
+            <label for="Cv">CV</label>
+            <input type="file" name="user-cv" id="cv" accept=".pdf"/>
+        </div>
+        <div id="handles">
+            <label for="github">GitHub</label>
+            <input name="user-github" type="text" id="github" />
+            <label for="linkedin">LinkedIn</label>
+            <input name="user-linkedin" type="text" id="linkedin"/>
+        </div>
+        <input type="submit" value="Create Portfolio"/>
+    </form>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>
